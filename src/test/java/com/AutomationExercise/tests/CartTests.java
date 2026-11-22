@@ -84,12 +84,12 @@ public class CartTests extends BaseTest {
     }
 
 
-    @BeforeMethod
+    @BeforeMethod (alwaysRun = true)
     public void setUp() {
         driver = new GUIDriver();
     }
 
-    @AfterMethod
+    @AfterMethod  (alwaysRun = true)
     public void tearDown() {
         ProductsActions.removeAllSelectedProducts();
         GUIDriver.quitDriver();
