@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test">
+    <test name="smoke test on widows">
+        <classes>
+            <class name="com.AutomationExercise.tests.HomeTests"/>
+            <class name="com.AutomationExercise.tests.ProductsTest"/>
+            <class name="com.AutomationExercise.tests.CartTests"/>
+            <class name="com.AutomationExercise.tests.ContactUsTests"/>
+            <class name="com.AutomationExercise.tests.ProductsTest"/>
+            <class name="com.AutomationExercise.tests.RegisterTest"/>
+            <class name="com.AutomationExercise.tests.TestCasesTests"/>
+        </classes>
+    </test>
+</suite>
