@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class RegisterTest extends BaseTest {
 
     //Test Scripts
-    @Test(description = "Test Case 1: Register User")
+    @Test(description = "Test Case 1: Register User", groups = {"smoke"})
     public void signupTest() {
         AccountData accountData = randomAccountData();
         new NavigationComponent(driver)
@@ -29,7 +29,7 @@ public class RegisterTest extends BaseTest {
         System.out.println(accountData.password());
     }
 
-    @Test(description = "Test Case 2: Login User with correct email and password")
+    @Test(description = "Test Case 2: Login User with correct email and password", groups = {"smoke", "regression", "sanity"})
     public void validLoginTest() {
         AccountData accountData = createTestUser();
         new NavigationComponent(driver)
@@ -53,7 +53,7 @@ public class RegisterTest extends BaseTest {
                 .verifyLoginErrorMessage("Invalid email or password");
     }
 
-    @Test(description = "Test Case 4: Logout User")
+    @Test(description = "Test Case 4: Logout User", groups = {"smoke", "regression"})
     public void logoutTest() {
         AccountData  accountData = createTestUser();
         String email = accountData.email();

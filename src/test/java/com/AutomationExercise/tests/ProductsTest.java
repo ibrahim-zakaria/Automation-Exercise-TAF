@@ -246,7 +246,7 @@ public class ProductsTest extends BaseTest {
                 .clickOnContinueBtn();
     }
 
-    @Test(description = "Test Case 24: Download Invoice after purchase order")
+    @Test(description = "Test Case 24: Download Invoice after purchase order", groups ={"regression"})
     public void downloadInvoiceAfterPurchaseOrder() {
         AccountData userData = randomAccountData();
         new NavigationComponent(driver)

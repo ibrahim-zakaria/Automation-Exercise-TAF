@@ -18,7 +18,9 @@ public class GUIDriver {
 
     private static ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
     public GUIDriver() {
-        Browser browserType = Browser.valueOf(PropertyReader.getProperty("browserType").toUpperCase());
+        String browser = System.getProperty("browser") != null ? System.getProperty("browser") : "Edge";
+        Browser browserType = Browser.valueOf(browser.toUpperCase());
+        LogsManager.info("Browser value is : " + browser);
         LogsManager.info("Browser Type: " + browserType);
         AbstractDriver abstractDriver = browserType.getBrowserFactory();
         WebDriver driver = null;

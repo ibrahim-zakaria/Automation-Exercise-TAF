@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class HomeTests extends BaseTest{
 
-    @Test(description = "Test Case 10: Verify Subscription in home page")
+    @Test(description = "Test Case 10: Verify Subscription in home page", groups={"sanity"})
     public void verifySubscriptionInHome(){
         new NavigationComponent(driver)
                 .navigateToHomePage()

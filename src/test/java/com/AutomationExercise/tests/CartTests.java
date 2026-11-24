@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class CartTests extends BaseTest {
 
-    @Test(description = "Test Case 11: Verify Subscription in Cart page")
+    @Test(description = "Test Case 11: Verify Subscription in Cart page", groups = {"regression"})
     public void verifySubscriptionInHome(){
         new NavigationComponent(driver)
                 .navigateToHomePage()
@@ -41,7 +41,7 @@ public class CartTests extends BaseTest {
 
     }
 
-    @Test(description = "Test Case 13: Verify Product quantity in Cart")
+    @Test(description = "Test Case 13: Verify Product quantity in Cart", groups = {"regression"})
     public void testProductQuantityInCart() {
         new NavigationComponent(driver)
                 .navigateToHomePage()
@@ -67,7 +67,7 @@ public class CartTests extends BaseTest {
                 .submitReview();
     }
 
-    @Test(description = "Test Case 17: Remove Products From Cart")
+    @Test(description = "Test Case 17: Remove Products From Cart", groups = {"smoke", "regression", "sanity"})
     public void removeProductFromCart() {
         new NavigationComponent(driver)
                 .navigateToHomePage()
